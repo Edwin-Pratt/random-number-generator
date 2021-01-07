@@ -9,6 +9,8 @@
 
 This is a simple and easy-to-use website for generating random numbers.
 
+[Random Number Generator](https://Edwin-Pratt.github.io/random-number-generator/)
+
 ## Project files
 
 - `.vscode/settings.json` is a file that I created to configure my VS Code workspace.
