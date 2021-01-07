@@ -12,6 +12,7 @@ let server = http.createServer(function(req, res) {
   switch (req.url) {
     case "/":
     case "/index.html":
+    case "./index.html":
       fs.readFile(__dirname + "/index.html")
         .then(content => {
           res.setHeader("Content-Type", "text/html");
@@ -23,7 +24,7 @@ let server = http.createServer(function(req, res) {
           res.end(JSON.stringify({ error: "Unknown error" }));
         });
       break;
-    case "/index.css":
+    case "./index.css":
       fs.readFile(__dirname + "/index.css")
         .then(content => {
           res.setHeader("Content-Type", "text/css");
@@ -35,7 +36,7 @@ let server = http.createServer(function(req, res) {
           res.end(JSON.stringify({ error: "Unknown error" }));
         });
       break;
-    case "/index.js":
+    case "./index.js":
       fs.readFile(__dirname + "/index.js")
         .then(content => {
           res.setHeader("Content-Type", "text/javascript");
